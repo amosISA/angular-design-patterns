@@ -1,0 +1,20 @@
+<div class="flex flex-wrap justify-around">
+  @for (favourite of appStore.$filteredFavourites(); track favourite; let last = $last) {
+    <div
+        (click)="showPhoto(favourite.id)"
+        class="w-[200px] rounded overflow-hidden shadow-lg m-3">
+        <img
+          class="w-full"
+          [ngSrc]="favourite.url"
+          [alt]="'Favourite ' + favourite.id"
+          width="200"
+          height="300"
+          priority />
+        <div class="px-6 pt-4 pb-2">
+            <span
+              (click)="removeFavourite(favourite.id); $event.stopPropagation()"
+              class="inline-block px-3 py-1 mb-2 mr-2 text-sm font-semibold text-gray-700 bg-gray-200 rounded-full cursor-pointer">Remove favourite</span>
+        </div>
+    </div>
+  }
+</div>

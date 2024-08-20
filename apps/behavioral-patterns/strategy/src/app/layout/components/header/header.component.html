@@ -1,0 +1,11 @@
+<ul class="flex">
+  @for (item of headerItems(); track item) {
+    <li class="flex-1 mr-2">
+      <a [routerLink]="item.url"
+        routerLinkActive="bg-sky-500 !text-white"
+        class="block px-4 py-2 text-center border rounded text-sky-500 border-sky-500 hover:bg-sky-700 hover:text-white hover:border-sky-700">
+        {{ item.text }} ({{ getTotals(item.id) }})
+      </a>
+    </li>
+  }
+</ul>

@@ -1,0 +1,25 @@
+<div class="flex flex-wrap justify-around">
+  @for (photo of appStore.$filteredPhotos(); track photo; let last = $last) {
+    <div class="w-[200px] rounded overflow-hidden shadow-lg m-3">
+        <img
+          class="w-full"
+          [ngSrc]="photo.url"
+          [alt]="'Photo ' + photo.id"
+          width="200"
+          height="300"
+          priority />
+        <div class="px-6 pt-4 pb-2">
+          <p>{{ photo.id }}</p>
+          <span
+            (click)="addFavourite(photo)"
+            class="inline-block px-3 py-1 mb-2 mr-2 text-sm font-semibold text-gray-700 bg-gray-200 rounded-full cursor-pointer">Add favourite</span>
+        </div>
+    </div>
+  }
+</div>
+
+@if (appStore.$isLoading()) {
+  <div class="flex justify-center m-5">
+    Loading...
+  </div>
+}

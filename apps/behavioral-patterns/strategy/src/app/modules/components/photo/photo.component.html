@@ -1,0 +1,10 @@
+@if (photo()) {
+  <div class="flex items-center justify-center mt-4">
+    <img
+      [ngSrc]="photo().url"
+      [alt]="'Photo ' + photo().id"
+      width="200"
+      height="300"
+      priority />
+  </div>
+}

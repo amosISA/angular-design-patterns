@@ -1,4 +1,4 @@
-# Angular Design Patterns Repository
+# ✨ Angular Design Patterns Repository ✨
 
 This repository is a comprehensive guide to design patterns in Angular applications. It covers three main categories of design patterns: Creational, Structural, and Behavioral. Each section includes multiple examples and guidance on how to identify these patterns in Angular source code.
 
