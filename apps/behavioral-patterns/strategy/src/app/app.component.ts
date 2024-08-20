@@ -3,7 +3,7 @@ import { RouterModule } from '@angular/router';
 
 @Component({
   selector: 'app-root',
-  templateUrl: './app.component.html',
+  template: `<router-outlet />`,
   standalone: true,
   imports: [RouterModule],
   changeDetection: ChangeDetectionStrategy.OnPush
